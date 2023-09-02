@@ -4,16 +4,18 @@ project:
 website:
   title: "CHollis Website Project"
   navbar:
+    background: secondary
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-
+      - href: about.qmd
+        text: About me
+        
+        
 format:
   html:
-    theme: cosmo
+    theme: slate
     css: styles.css
     toc: true
 
 editor: visual
-
