@@ -1,9 +1,19 @@
 ---
-title: "About"
+title: "About me"
 ---
 
-About this site
+I am Camron Hollis, currently of the PPPE PhD program at the University of Texas at Dallas.
 
-```{r}
-1 + 1
-```
+### Professional 
+
+My academic interests are international relations, political economy, and Marxian historiography. I am a student and teaching assistant at UT Dallas.
+
+For academic inquiries: camron.hollis\@utdallas.edu
+
+### Personal
+
+I sail, hike, and argue with people online.
+
+For personal inquiries: camronjh\@bellsouth.net
+
+[Back to Home](index.qmd)
