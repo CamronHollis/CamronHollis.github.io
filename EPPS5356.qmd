@@ -1,0 +1,11 @@
+---
+title: "EPPS 5356"
+---
+
+This page is for listing submissiong for the EPPS 5356 Data Visualization.
+
+Currently Assignments will all be on the same page, but this page will be turned into a directory once the list is long enough.
+
+### Sept.  13, 2023
+
+Figure review.
