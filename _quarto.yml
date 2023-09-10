@@ -11,7 +11,7 @@ website:
         text: Home
       - href: about.qmd
         text: About me
-      - href: EPPS5356
+      - href: EPPS5356.qmd
         text: EPPS 5356
         
         
