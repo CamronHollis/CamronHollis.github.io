@@ -1,23 +1,26 @@
 ---
-title: "EPPS 5356 Assignment 1"
+title: "EPPS 6356 Assignment 1"
 ---
 
-### Assignment 1
+## Assignment 1
 
-1.  Anscombe.R
+### 1. Anscombe.R
 
-```{r echo = F}
+```{r include=FALSE}
+library(gsubfn)
+library(tidyverse)
 
-## Anscombe (1973) Quartlet
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-data(anscombe)  # Load Anscombe's data
+```{r echo = F, out.width = "50%", out.height= "65%", results = 'hide', fig.keep='all'}
+
+data(anscombe)
 summary(anscombe)
 
-## Simple version
 plot(anscombe$x1,anscombe$y1)
 summary(anscombe)
 
-# Create four model objects
 lm1 <- lm(y1 ~ x1, data=anscombe)
 summary(lm1)
 lm2 <- lm(y2 ~ x2, data=anscombe)
@@ -34,9 +37,6 @@ plot(anscombe$x3,anscombe$y3)
 abline(coefficients(lm3))
 plot(anscombe$x4,anscombe$y4)
 abline(coefficients(lm4))
-
-
-## Fancy version (per help file)
 
 ff <- y ~ x
 mods <- setNames(as.list(1:4), paste0("lm", 1:4))
@@ -68,22 +68,27 @@ par(op)
 
 ```
 
-1.  Generative Art Review
 
-2.  Fall.R
+### 2. Generative Art Review
 
-```{r echo = F}
+This generative art is produced by Adobe using a 'Generative Fill' tool. The tool was used on famous album covers, generating images beyond the previous borders of the covers, to produce the below results.
 
-# Title Fall color
-# Credit: https://fronkonstin.com
+```{r echo = F, out.width = "30%", out.height= "30%"}
 
-library(gsubfn)
-library(tidyverse)
+knitr::include_graphics("https://cdn.arstechnica.net/wp-content/uploads/2023/05/beatles_hero_1-800x450.jpg")
 
-# Define elements in plant art
-# Each image corresponds to a different axiom, rules, angle and depth
+knitr::include_graphics("https://wersm.com/wp-content/uploads/2023/06/wersm-generative-AI-album-covers-Metalilica.jpeg?ezimgfmt=rs:799x799/rscb2/ng:webp/ngcb2")
 
-# Leaf of Fall
+knitr::include_graphics("https://wersm.com/wp-content/uploads/2023/06/wersm-generative-AI-album-covers-pink-floyd.jpeg?ezimgfmt=rs:799x799/rscb2/ng:webp/ngcb2")
+
+```
+
+Respectfully, it does a bad job. The generative art muddies the artistic choices made on the album covers and makes goofy additions. The generative tool is not purposeful nor subtle, and simply creates vaguely related scenes to fill out as much space as the user commands.
+
+
+### 3. Fall.R
+
+```{r echo = F, out.width = "50%", out.height= "65%", results = 'hide', fig.keep='all'}
 
 axiom="X"
 rules=list("X"="F-[[X]+X]+F[+FX]-X", "F"="FF")
@@ -97,10 +102,6 @@ actions=str_extract_all(axiom, "\\d*\\+|\\d*\\-|F|L|R|\\[|\\]|\\|") %>% unlist
 
 status=data.frame(x=numeric(0), y=numeric(0), alfa=numeric(0))
 points=data.frame(x1 = 0, y1 = 0, x2 = NA, y2 = NA, alfa=90, depth=1)
-
-
-# Generating data
-# Note: may take a minute or two
 
 for (action in actions)
 {
@@ -145,4 +146,14 @@ ggplot() +
 
 ```
 
-4.  Chart critique
+The leaf color is 'darksalmon', which is how I like my salmon.
+
+### 4. Chart critique
+
+![](https://i.imgur.com/9BrT3IS_d.webp?maxwidth=760&fidelity=grand)
+
+This is the Florida gun death chart, created by Reuters. This chart was criticized on its publication in 2014 for confusing people by having the line going down when it was really depicting an increase in gun deaths: At first glance, one might take away that gun murders had gone down in Florida after the passage of the Stand Your Ground law, while in fact the opposite is true. The creators of the graph defended themselves by claiming it was stylized after dripping blood, evocative of the deaths caused by gun violence. If that was their aim, they didn't really commit. For example, if they made upside down bars instead of a line, it would have looked better.
+
+The dripping blood aesthetic is not the only criticism of that can be made of the graph. The time axis is badly depicted, where it is harder to tell which dot is attached to which year, besides from the clearly labeled 2005. It is also not clear why the first and last point has a labeled death value, but no other point. The range of values is also much more narrow than the chart because the authors decided to include 0 and 1000, a choice I assume was to expand the amount of red headroom for their blood aesthetic.
+
+The font and color choices are fine, although the big block of red makes the chart hart to look at for long period.

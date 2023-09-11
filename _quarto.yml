@@ -11,9 +11,10 @@ website:
         text: Home
       - href: about.qmd
         text: About me
-      - href: EPPS5356.qmd
-        text: EPPS 5356
-        
+      - text: EPPS 5356
+        menu:
+          - href: EPPS6356Assignment1.qmd
+            text: Assignment 1
         
 format:
   html:
