@@ -3,7 +3,7 @@ title: "EPPS 6356 Assignment 4"
 ---
 
 
-```{r include=FALSE}
+```{r include=T}
 library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -14,7 +14,7 @@ library(purrr)
 
 ### Chart 1: Variable Width Column Chart
 
-```{r include = F}
+```{r include = T}
 owidall = read.csv("http://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv?raw=true")
 owidall = owidall[!grepl("^OWID", owidall$iso_code), ]
 owideu = subset(owidall, continent=="Europe")
@@ -29,7 +29,7 @@ owidnewyear2 = subset(owidnewyear2, location !=
 ```
 
 
-```{r echo = F, warning = F}
+```{r echo = T, warning = F}
 #plot(x = owidnewyear$population_density,y = owidnewyear$total_cases)
 
 w = owidnewyear2$population_density
@@ -73,7 +73,7 @@ ggplot(data = owidnewyear2,
 ### Chart 2: Table with Embedded Charts
 
 
-```{r echo = F}
+```{r echo = T}
 
   par(mfrow=c(2, 3) )
 
@@ -142,7 +142,7 @@ ggplot(data = owidnewyear2,
 ### 3. Bar Chart
 
 
-```{r echo=FALSE, warning=FALSE}
+```{r echo=T, warning=FALSE}
 # Number 3
 #library(tidyverse)
 
@@ -175,10 +175,10 @@ base + labs(title = "2021 Covid Deaths in South America", x = "Deaths per Millio
 ```
 
 
-### 4. Collumn Chart
+### 4. Column Chart
 
 
-```{r echo = F, warning= F, message= F}
+```{r echo = T, warning= F, message= F}
 # Number 4
 
 ## Download COVID data from OWID GitHub
@@ -209,7 +209,7 @@ base + scale_x_date(date_labels = "%d", date_break = "1 day") +
 
 
 
-```{r eval = F, echo =F }
+```{r eval = F, echo = F }
 ggplot(data= (subset(owideu, location == "Italy")), aes(x=date)) +
   geom_bar(aes(y=log(new_cases)), stat="identity", position ="identity", alpha=.3, fill='lightblue', color='lightblue4') +
   geom_bar(aes(y=log(new_deaths)), stat="identity", position="identity", alpha=.8, fill='pink', color='red') +
