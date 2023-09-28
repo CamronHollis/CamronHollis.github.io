@@ -19,6 +19,8 @@ website:
             text: Assignment 2
           - href: EPPS6356Assignment3.qmd
             text: Assignment 3
+          - href: EPPS6356Assignment4.qmd
+            text: Assignment 4
         
 format:
   html:

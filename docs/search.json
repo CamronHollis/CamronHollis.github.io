@@ -61,5 +61,12 @@
     "title": "EPPS 6356 Assignment 3",
     "section": "",
     "text": "1. anscombe.r\nHere are all the plotted regressions from anscombe.r together.\n\n\n\n\n\n\n\n2. Finetuning\nEach plot has different fonts. They are TMS, Mono, Serif, and Sans respectively.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3. ggplot2\nNow created in ggplot2, with different fonts, shapes, and sizes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4. Pre-Hackathon\nThe below figure is created in base r graphics\n\n\n\n\n\nThe below figure is created with ggplot2."
+  },
+  {
+    "objectID": "EPPS6356Assignment4.html",
+    "href": "EPPS6356Assignment4.html",
+    "title": "EPPS 6356 Assignment 4",
+    "section": "",
+    "text": "Chart 1: Variable Width Column Chart\n\n\n\n\n\n\n\nChart 2: Table with Embedded Charts\n\n\n\n\n\n\n\n3. Bar Chart\n\n\n\n\n\n\n\n4. Collumn Chart"
   }
 ]
