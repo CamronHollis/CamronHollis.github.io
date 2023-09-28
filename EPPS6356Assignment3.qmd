@@ -1,0 +1,210 @@
+---
+title: "EPPS 6356 Assignment 3"
+---
+
+```{r include=FALSE}
+library(ggplot2)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### 1. anscombe.r
+
+Here are all the plotted regressions from anscombe.r together.
+
+```{r echo = F, out.width = "50%", out.height= "65%"}
+## Anscombe (1973) Quartlet
+
+data(anscombe)  # Load Anscombe's data
+
+# Create four model objects
+lm1 <- lm(y1 ~ x1, data=anscombe)
+lm2 <- lm(y2 ~ x2, data=anscombe)
+lm3 <- lm(y3 ~ x3, data=anscombe)
+lm4 <- lm(y4 ~ x4, data=anscombe)
+
+## Fancy version (per help file)
+
+ff <- y ~ x
+mods <- setNames(as.list(1:4), paste0("lm", 1:4))
+
+# Plot using for loop
+for(i in 1:4) {
+  ff[2:3] <- lapply(paste0(c("y","x"), i), as.name)
+  ## or   ff[[2]] <- as.name(paste0("y", i))
+  ##      ff[[3]] <- as.name(paste0("x", i))
+  mods[[i]] <- lmi <- lm(ff, data = anscombe)
+}
+
+##sapply(mods, coef)  # Note the use of this function
+##lapply(mods, function(fm) coef(summary(fm)))
+
+# Preparing for the plots
+op <- par(mfrow = c(2, 2), mar = 0.1+c(4,4,1,1), oma =  c(0, 0, 2, 0))
+
+# Plot charts using for loop
+for(i in 1:4) {
+  ff[2:3] <- lapply(paste0(c("y","x"), i), as.name)
+  plot(ff, data = anscombe, col = "red", pch = 21, bg = "orange", cex = 1.2,
+       xlim = c(3, 19), ylim = c(3, 13))
+  abline(mods[[i]], col = "blue")
+}
+mtext("Anscombe's 4 Regression data sets", outer = TRUE, cex = 1.5)
+par(op)
+```
+
+### 2. Finetuning
+
+Each plot has different fonts. They are TMS, Mono, Serif, and Sans respectively.
+
+```{r echo = F, out.width = "50%", out.height= "65%"}
+# The different regression lines
+
+## Use a serif font
+plot(anscombe$x1,anscombe$y1, font = 1, cex = 1, col = "red",
+     family = "Times New Roman",
+     pch = 0,
+     xlab = "X Axis", ylab = "Y Axis",main = "1 Figure")
+abline(coefficients(lm1))
+plot(anscombe$x2,anscombe$y2, font = 2, cex = 2, col = "blue",
+     family = "mono",
+     pch = 1,
+     xlab = "X Axis", ylab = "Y Axis",main = "2 Figure")
+abline(coefficients(lm2))
+plot(anscombe$x3,anscombe$y3, font = 3, cex = 3, col = "green",
+     family = "serif",
+     pch = 2,
+     xlab = "X Axis", ylab = "Y Axis",main = "3 Figure")
+abline(coefficients(lm3))
+plot(anscombe$x4,anscombe$y4, font = 4, cex = 4, col = "brown",
+     family = "sans",
+     pch = 4,
+     xlab = "X Axis", ylab = "Y Axis", main = "4 Figure")
+abline(coefficients(lm4))
+```
+
+### 3. ggplot2
+
+Now created in ggplot2, with different fonts, shapes, and sizes
+
+```{r  echo = F, out.width = "50%", out.height= "65%", results = 'hide', fig.keep='all', warning = F, message = F}
+ggplot(data = anscombe, aes(x = x1, y = y1)) +
+  geom_point(
+    color = "blue",
+    size = 2,
+    shape = 1
+  ) +
+  labs(
+    title = "anscombe 1, y ~ x",
+    x = "X Axis",
+    y = "Y Axis"
+  ) +
+  geom_smooth(formula = y ~ x, color = "purple", se = F) +
+  theme(text=element_text(size=11, family = "Comic Sans MS") )
+
+ggplot(data = anscombe, aes(x = x2, y = y2)) +
+  geom_point(
+    color = "red",
+    size = 3,
+    shape = 2
+  ) +
+  labs(
+    title = "anscombe 2, y ~ s(x, bs = cs",
+    x = "X Axis",
+    y = "Y Axis"
+  ) +
+  geom_smooth(fomula = y ~ s(x, bs = "cs"), color = "red4", se = F) +
+  theme(text=element_text(size=11, family = "mono") )
+
+ggplot(data = anscombe, aes(x = x3, y = y3)) +
+  geom_point(
+    color = "orange",
+    size = 4,
+    shape = 3
+  ) +
+  labs(
+    title = "anscombe 3, y ~ poly(x, 2),",
+    x = "X Axis",
+    y = "Y Axis"
+  ) +
+  geom_smooth(formula = y ~ poly(x, 2), color = "orange4", se = F) +
+  theme(text=element_text(size=11, family = "sans") )
+
+ggplot(data = anscombe, aes(x = x4, y = y4)) +
+  geom_point(
+    color = "deeppink",
+    size = 3,
+    shape = 5
+  ) +
+  labs(
+    title = "anscombe 4, lm",
+    x = "X Axis",
+    y = "Y Axis "
+  ) +
+  geom_smooth(method = "lm", color = "deeppink4", se = F) +
+  theme(text=element_text(size=11, family = "Times New Roman") )
+
+
+
+```
+
+
+### 4. Pre-Hackathon
+
+```{r echo = F}
+owidall = read.csv("http://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv?raw=true")
+owidall = owidall[!grepl("^OWID", owidall$iso_code), ]
+owideu = subset(owidall, continent=="Europe")
+
+##owidts = ts(owideu)
+
+##owideu$datedate = as.Date(owideu$date, "%Y-%m/%d")
+
+owideu[,68] = as.Date(owideu[,4])
+##typeof(owideu[50,68])
+##summary(owideu[,68])
+
+```
+
+
+The below figure is created in base r graphics
+
+```{r echo = F, results = 'hide', fig.keep='all'}
+plot(
+  x = owideu$V68,
+  y = owideu$new_deaths,
+  font = 1, pch = 20, cex = 0.2,
+  col = "deeppink3",
+  xlab = "Date",
+  ylab = "Covid Deaths in Europe, Daily"
+)
+```
+
+
+
+The below figure is created with ggplot2.
+```{r echo = F, results = 'hide', fig.keep='all'}
+ggplot(data = owideu, aes(x = V68, y = new_deaths)) +
+  geom_point(
+    color = "deeppink3",
+    size = 0.5,
+    shape = 20,
+    na.rm = T
+  ) +
+  labs(
+    title = "",
+    x = "Date",
+    y = "Covid Deaths in Europe, Daily"
+  ) +
+  theme_light()
+  annotate("text", label = "Spain", col = "black",
+      x = 2020,
+      y = 0)
+  theme(text=element_text(size=11, family = "Times New Roman") )
+```
+
+
+
+
+
+
