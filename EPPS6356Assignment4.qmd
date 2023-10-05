@@ -7,8 +7,7 @@ title: "EPPS 6356 Assignment 4"
 library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 
-library(tidyr)
-library(purrr)
+
 ```
 
 
@@ -143,27 +142,19 @@ ggplot(data = owidnewyear2,
 
 
 ```{r echo=T, warning=FALSE}
-# Number 3
-#library(tidyverse)
-
 ## Download COVID data from OWID GitHub
 # Deselect cases/rows with OWID
 ## owidall1 = owidall[!grepl("^OWID", owidall$iso_code), ]
-# Subset by continent: Asia
 south1 = subset(owidall, continent=="South America")
 
-# Define the date range
 start_date <- as.Date("2021-01-01")
 end_date <- as.Date("2021-12-31")
 
-# Subset the data frame by the date range & organize
 south = subset(south1, date >= start_date & date <= end_date)
 south$location <- factor(south$location,levels=rev(unique(south$location)))
 
-# Create plot
 base <- ggplot(south) + geom_col(aes(new_deaths_per_million, location), fill = "black", col="black", width = 0.6)
 
-# Display plot
 base + labs(title = "2021 Covid Deaths in South America", x = "Deaths per Million", y = NULL) + scale_x_continuous(breaks = seq(0, 3000, by = 500)) + theme(
   panel.background = element_rect(fill = "white"),
   panel.border = element_rect(color = "black", linewidth = 1, fill = NA),
@@ -179,20 +170,15 @@ base + labs(title = "2021 Covid Deaths in South America", x = "Deaths per Millio
 
 
 ```{r echo = T, warning= F, message= F}
-# Number 4
 
-## Download COVID data from OWID GitHub
-# Deselect cases/rows with OWID
 ##owidall1 = owidall[!grepl("^OWID", owidall$iso_code), ]
 # Subset by country: Italy
 italy = subset(owidall, location=="Italy")
 
-# Define the date range
 start_date <- as.Date("2020-05-01")
 end_date <- as.Date("2020-5-30")
 italy = subset(italy, date >= start_date & date <= end_date)
 
-# Create a grouped column chart
 base <- ggplot(data= (italy), aes(x=as.Date(date))) + 
   geom_bar(aes(y=log(new_cases)), stat="identity", position ="identity", alpha=.3, fill='lightblue', color='lightblue3') +
   geom_bar(aes(y=log(new_deaths)), stat="identity", position="identity", alpha=.8, fill='pink', color='pink3') + xlim(start_date, end_date) + ylim(0,8) + 
