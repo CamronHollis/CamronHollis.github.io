@@ -1,0 +1,102 @@
+---
+title: "EPPS 6356 Assignment 5"
+---
+
+
+```{r include=F}
+library(ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
+
+
+```
+
+### 1. R Graphics
+
+
+```{r}
+
+#histogram
+
+hist(Orange$circumference, breaks = 20,
+     xlab = "Circumference",
+     main = "The circumference of Orange Trees",
+     ylab = "Number of Trees")
+
+#Barchart
+##vertical
+
+barplot(height = ToothGrowth$len, width = ToothGrowth$dose,
+        xlab = "Dosage", ylab = "Tooth Growth", main = "The Effect of Suppliments on Guinea Pig Tooth Growth")
+
+##horizontal
+
+barplot(height = ToothGrowth$len, width = ToothGrowth$dose,
+        xlab = "Tooth Growth", ylab = "Dosage", main = "The Effect of Suppliments on Guinea Pig Tooth Growth", horiz = T)
+
+#Piechart
+
+pie(
+  WorldPhones[5,],
+  main = "Number of Phones in 1959, by continent"
+)
+
+#Boxplot
+
+boxplot(attenu$dist ~ attenu$mag,
+        xlab = "Magnitude",
+        ylab = "Distance from epicenter",
+        main = "Earthquake measurements"
+  
+)
+
+#Scatterplot
+
+plot(iris$Sepal.Length, iris$Sepal.Width,
+     xlab = "Length",
+     ylab = "Width",
+     main = "Flower Sepals"
+
+)
+
+
+```
+
+
+
+### 2. ggplot2
+
+```{r}
+
+#histogram
+
+ggplot(data = Orange, aes(x = Circumfrence) ) +
+  geom_histogram(aes(x = circumference), bins = 20, color="black", fill="grey30") +
+  theme_classic() +
+  labs(title="The circumference of Orange Trees", x = "Circumference", y = "Number of Trees")
+  
+
+#Barchart
+##vertical
+
+ggplot(data = ToothGrowth, aes(x = len, y = supp, width = dose)) +
+  geom_bar(aes(fill = len), stat="identity", position="identity") +
+  theme_classic() +
+  labs(title="Tooth Growth", x = "Length", y = "Dosage")
+
+
+#Scatterplot
+
+ggplot(data = iris) +
+  geom_point(aes(x = Sepal.Length, y = Sepal.Width)) +
+  theme_classic() +
+  labs(title="Flower Sepals", x = "Length", y = "Width")
+
+
+
+
+
+
+```
+
+
+
