@@ -1,0 +1,129 @@
+---
+title: "EPPS 6356 Assignment 9"
+---
+
+
+```{r include=FALSE, echo = F, warning = F}
+library(ggplot2)
+library(quantmod)
+##library(TSstudio)
+##library(tidyverse)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### 1. BBBYQ
+
+The stock value of the defunct and dead memestock, BBBYQ. This xts object goes from January 1st 2020, to  June 30th, 2023
+
+```{r, echo = F, warning = F}
+### Time series of the BBBYQ memestock
+
+getSymbols(
+    Symbols = "BBBYQ"
+)
+
+BBBYQ = BBBYQ["2020-01/2023-06"]
+
+
+plot(
+  BBBYQ$BBBYQ.Close
+)
+
+
+```
+
+### 2. Variables
+
+The xts object has is indexed by time, with each observation being one sequential day. Each observation has the stock ticker open, high, low, and close value.
+
+
+```{r, warning= F}
+class(BBBYQ)
+summary(BBBYQ)
+```
+
+
+
+### 3. Analysis
+
+We will be using the close value series for the following analysis. Time span is still January 2020 to July 2023.
+
+#### Trend analysis
+
+Value and smoothed
+
+```{r, echo = F}
+
+BBBYQ = BBBYQ$BBBYQ.Close
+
+plot(BBBYQ,
+     lwd = 0.5,
+     main = "Close value and month-smoothed value"
+     )
+lines( rollmean(BBBYQ, 14, align = "center"),
+       col = "red"
+       )
+
+
+```
+
+
+```{r, echo = F, warning= F}
+
+### Plots from the TSstudio package
+
+##ts_seasonal(BBBYQ, type = "")
+
+##ts_cor(USgas)
+
+##ts_lags(USgas, margin = .01)
+
+```
+
+
+
+
+#### Stationarity analysis
+
+```{r}
+
+plot(diff(BBBYQ),
+     lwd = 0.5,
+     main = "First differences, i.e. daily gain, and month-smoothed value"
+    )
+lines(diff(rollmean(BBBYQ, 14, align = "center") ),
+        col = "red"
+    )
+
+```
+
+
+#### pdq & PDQ
+
+There may also be some seasonality to the data
+
+```{r, echo = F}
+
+
+
+acf(BBBYQ,
+    main = "BBBYQ acf")
+pacf(BBBYQ,
+     main = "BBBYQ pacf")
+
+BBBYQ2 = arima(BBBYQ, order = c(1,1,1) )
+
+acf(BBBYQ2$residuals,
+    main = "BBBYQ ARIMA(1,1,1)  residuals acf")
+pacf(BBBYQ2$residuals,
+     main = "BBBYQ ARIMA(1,1,1) residuals pacf")
+
+plot(BBBYQ2$residuals,
+     main = "BBBYQ ARIMA(1,1,1) residuals")
+
+
+```
+
+
+

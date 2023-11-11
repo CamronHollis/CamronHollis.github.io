@@ -16,6 +16,6 @@ https://camronhollis.shinyapps.io/epps6356assignment6/
 
 
 <iframe id="example1" src="https://camronhollis.shinyapps.io/epps6356assignment6/"
-style="border: non; width: 100%; height: 500px"
-frameborder="0">
+style="border: non; width: 100%; height: 600px"
+frameborder="no">
 </iframe>

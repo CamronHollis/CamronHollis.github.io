@@ -82,5 +82,12 @@
     "title": "EPPS 6356 Assignment 6",
     "section": "",
     "text": "https://camronhollis.shinyapps.io/epps6356assignment6/"
+  },
+  {
+    "objectID": "EPPS6356Assignment9.html",
+    "href": "EPPS6356Assignment9.html",
+    "title": "EPPS 6356 Assignment 9",
+    "section": "",
+    "text": "1. BBBYQ\nThe stock value of the defunct and dead memestock, BBBYQ. This xts object goes from January 1st 2020, to June 30th, 2023\n\n\n[1] \"BBBYQ\"\n\n\n\n\n\n\n\n2. Variables\nThe xts object has is indexed by time, with each observation being one sequential day. Each observation has the stock ticker open, high, low, and close value.\n\nclass(BBBYQ)\n\n[1] \"xts\" \"zoo\"\n\nsummary(BBBYQ)\n\n     Index              BBBYQ.Open        BBBYQ.High        BBBYQ.Low     \n Min.   :2020-01-02   Min.   : 0.0483   Min.   : 0.1009   Min.   : 0.048  \n 1st Qu.:2020-11-12   1st Qu.: 5.2775   1st Qu.: 5.7175   1st Qu.: 4.985  \n Median :2021-09-29   Median :12.9350   Median :13.7700   Median :12.440  \n Mean   :2021-09-30   Mean   :13.9365   Mean   :14.5584   Mean   :13.390  \n 3rd Qu.:2022-08-15   3rd Qu.:21.7312   3rd Qu.:22.6750   3rd Qu.:21.060  \n Max.   :2023-06-30   Max.   :42.9800   Max.   :53.9000   Max.   :41.117  \n  BBBYQ.Close       BBBYQ.Volume       BBBYQ.Adjusted   \n Min.   : 0.0751   Min.   :  1092694   Min.   : 0.0751  \n 1st Qu.: 5.2975   1st Qu.:  4808161   1st Qu.: 5.2975  \n Median :13.0250   Median :  8098816   Median :13.0250  \n Mean   :13.9094   Mean   : 23515786   Mean   :13.8930  \n 3rd Qu.:21.7925   3rd Qu.: 14734654   3rd Qu.:21.7925  \n Max.   :52.8900   Max.   :962558838   Max.   :52.8900  \n\n\n\n\n3. Analysis\nWe will be using the close value series for the following analysis. Time span is still January 2020 to July 2023.\n\nTrend analysis\nValue and smoothed\n\n\n\n\n\n\n\n\n\n\nStationarity analysis\n\nplot(diff(BBBYQ),\n     lwd = 0.5,\n     main = \"First differences, i.e. daily gain, and month-smoothed value\"\n    )\n\n\n\nlines(diff(rollmean(BBBYQ, 14, align = \"center\") ),\n        col = \"red\"\n    )\n\n\n\n\n\n\npdq & PDQ\nThere may also be some seasonality to the data"
   }
 ]

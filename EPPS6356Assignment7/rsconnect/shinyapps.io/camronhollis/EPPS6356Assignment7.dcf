@@ -1,0 +1,12 @@
+name: EPPS6356Assignment7
+title: EPPS6356Assignment7
+username: camronhollis
+account: camronhollis
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10330550
+bundleId: 7858949
+url: https://camronhollis.shinyapps.io/EPPS6356Assignment7/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
