@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CHollis Website Project - About me</title>
+<title>CHollis Website Project - EPPS 6356 Assignment 10</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -147,8 +147,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#professional" id="toc-professional" class="nav-link active" data-scroll-target="#professional">Professional</a></li>
-  <li><a href="#personal" id="toc-personal" class="nav-link" data-scroll-target="#personal">Personal</a></li>
+  <li><a href="#leaflet-map" id="toc-leaflet-map" class="nav-link active" data-scroll-target="#leaflet-map">1. Leaflet Map</a></li>
+  <li><a href="#census-api-key" id="toc-census-api-key" class="nav-link" data-scroll-target="#census-api-key">2. Census API Key</a></li>
+  <li><a href="#spacialdata-examples" id="toc-spacialdata-examples" class="nav-link" data-scroll-target="#spacialdata-examples">3. Spacialdata Examples</a></li>
+  <li><a href="#different-year-comparisons" id="toc-different-year-comparisons" class="nav-link" data-scroll-target="#different-year-comparisons">4. Different Year Comparisons</a></li>
   </ul>
 </nav>
     </div>
@@ -157,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About me</h1>
+<h1 class="title">EPPS 6356 Assignment 10</h1>
 </div>
 
 
@@ -172,17 +174,111 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>I am Camron Hollis, currently of the PPPE PhD program at the University of Texas at Dallas.</p>
-<section id="professional" class="level3">
-<h3 class="anchored" data-anchor-id="professional">Professional</h3>
-<p>My academic interests are international relations, political economy, and Marxian historiography. I am a student and teaching assistant at UT Dallas.</p>
-<p>For academic inquiries: camron.hollis@utdallas.edu</p>
+<section id="leaflet-map" class="level2">
+<h2 class="anchored" data-anchor-id="leaflet-map">1. Leaflet Map</h2>
 </section>
-<section id="personal" class="level3">
-<h3 class="anchored" data-anchor-id="personal">Personal</h3>
-<p>I sail, hike, and argue with people online.</p>
-<p>For personal inquiries: camronjh@bellsouth.net</p>
-<p><a href="./index.html">Back to Home</a></p>
+<section id="census-api-key" class="level2">
+<h2 class="anchored" data-anchor-id="census-api-key">2. Census API Key</h2>
+</section>
+<section id="spacialdata-examples" class="level2">
+<h2 class="anchored" data-anchor-id="spacialdata-examples">3. Spacialdata Examples</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>To enable caching of data, set `options(tigris_use_cache = TRUE)`
+in your R script or .Rprofile.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Getting data from the 2019 1-year ACS</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The 1-year ACS provides data for geographies with populations of 65,000 and greater.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="EPPS6356Assignment10_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="EPPS6356Assignment10_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Getting data from the 2016-2020 5-year ACS</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 6896 features and 5 fields (with 12 geometries empty)
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -106.6456 ymin: 25.83738 xmax: -93.50829 ymax: 36.5007
+Geodetic CRS:  NAD83
+First 10 features:
+         GEOID                                         NAME   variable estimate
+1  48195950100    Census Tract 9501, Hansford County, Texas B19013_001    53295
+2  48375010700       Census Tract 107, Potter County, Texas B19013_001    47738
+3  48375014100       Census Tract 141, Potter County, Texas B19013_001    38990
+4  48073950801 Census Tract 9508.01, Cherokee County, Texas B19013_001    50117
+5  48085031643    Census Tract 316.43, Collin County, Texas B19013_001    87438
+6  48085032008    Census Tract 320.08, Collin County, Texas B19013_001    84792
+7  48085032012    Census Tract 320.12, Collin County, Texas B19013_001    49429
+8  48085031715    Census Tract 317.15, Collin County, Texas B19013_001   133258
+9  48097000600          Census Tract 6, Cooke County, Texas B19013_001    52335
+10 48097000200          Census Tract 2, Cooke County, Texas B19013_001    83047
+     moe                       geometry
+1  16931 MULTIPOLYGON (((-101.6239 3...
+2  13237 MULTIPOLYGON (((-101.8173 3...
+3   7134 MULTIPOLYGON (((-101.7989 3...
+4  10458 MULTIPOLYGON (((-95.40203 3...
+5  27660 MULTIPOLYGON (((-96.75057 3...
+6  11846 MULTIPOLYGON (((-96.68251 3...
+7   8611 MULTIPOLYGON (((-96.69911 3...
+8  24557 MULTIPOLYGON (((-96.81625 3...
+9  10700 MULTIPOLYGON (((-97.13371 3...
+10 13814 MULTIPOLYGON (((-97.48509 3...</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="EPPS6356Assignment10_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="different-year-comparisons" class="level2">
+<h2 class="anchored" data-anchor-id="different-year-comparisons">4. Different Year Comparisons</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Getting data from the 2006-2010 5-year ACS</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 5265 features and 5 fields (with 6 geometries empty)
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -106.6456 ymin: 25.83738 xmax: -93.51641 ymax: 36.5007
+Geodetic CRS:  NAD83
+First 10 features:
+         GEOID                                      NAME   variable estimate
+1  48029110100    Census Tract 1101, Bexar County, Texas B19013_001    24922
+2  48029110300    Census Tract 1103, Bexar County, Texas B19013_001    20841
+3  48029110500    Census Tract 1105, Bexar County, Texas B19013_001    11172
+4  48029120300    Census Tract 1203, Bexar County, Texas B19013_001   104668
+5  48029120702 Census Tract 1207.02, Bexar County, Texas B19013_001    70878
+6  48029121108 Census Tract 1211.08, Bexar County, Texas B19013_001    66781
+7  48029121115 Census Tract 1211.15, Bexar County, Texas B19013_001    76625
+8  48029121120 Census Tract 1211.20, Bexar County, Texas B19013_001    57667
+9  48029121205 Census Tract 1212.05, Bexar County, Texas B19013_001    39630
+10 48029121505 Census Tract 1215.05, Bexar County, Texas B19013_001    51334
+     moe                       geometry
+1   3396 MULTIPOLYGON (((-98.49928 2...
+2   4537 MULTIPOLYGON (((-98.48687 2...
+3   4813 MULTIPOLYGON (((-98.51411 2...
+4  13170 MULTIPOLYGON (((-98.45928 2...
+5   8254 MULTIPOLYGON (((-98.48187 2...
+6  10793 MULTIPOLYGON (((-98.47468 2...
+7   7153 MULTIPOLYGON (((-98.46577 2...
+8   4766 MULTIPOLYGON (((-98.43285 2...
+9   4557 MULTIPOLYGON (((-98.4171 29...
+10  5875 MULTIPOLYGON (((-98.33077 2...</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="EPPS6356Assignment10_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 </section>

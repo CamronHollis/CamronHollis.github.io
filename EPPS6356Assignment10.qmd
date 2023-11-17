@@ -1,0 +1,171 @@
+---
+title: "EPPS 6356 Assignment 10"
+---
+
+
+```{r include=FALSE, echo = F, warning = F}
+library(ggplot2)
+#1
+library(htmlwidgets)
+library(leaflet)
+library(tidyverse)
+#2
+library(tidycensus)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## 1. Leaflet Map
+
+```{r, eval=FALSE, include=FALSE}
+## R Leaflet sample program 
+## file: spatial_leaflet.R
+## Create an interactive map for web using ESRI Leaflet
+# Package:  leaflet, htmlwidgets, tidyverse
+
+## install.packages(c("htmlwidgets", "leaflet", "tidyverse"))
+
+
+# Get EPPS geocode information (i.e. lon, lat) from online geocoder websites.
+# For example: https://www.mapdevelopers.com/geocode_tool.php
+
+# Create object using leaflet setting the view at EPPS geo location)
+eppsmap <- leaflet() %>% setView(-96.7478372, 32.9886268, zoom=14)
+
+# Create object to acquire map data from ESRI
+esri <- grep("^Esri", providers, value = TRUE)
+
+for (provider in esri) {
+  eppsmap <- eppsmap %>% addProviderTiles(provider, group = provider)
+}
+
+findmeat <- paste(sep = "<br/>",
+                  "<b><img src='https://karlho.github.io/images/karlportrait140.png' alt='Karl Ho'  style='width:45px;height:60px;' align = 'right'></b>",
+                  "<b><a href='http://karlho.com' target='_blank'>Karl Ho </a></b>",
+                  "<b><a href='http://epps.utdallas.edu' target='_blank'>School of Economic, </a></b>",
+                  "<b><a href='http://epps.utdallas.edu' target='_blank'>Political and Policy Sciences</a></b>",
+                  "<b><a href='http://www.utdallas.edu' target='_blank'>University of Texsa at Dallas</a></b>",
+                  "800 West Campbell Road, GR31",
+                  "Richardson TX 75080"
+)
+
+# Use htmlwidget::onRender function to  add custom behavior to the leaflet map using native JavaScript.
+
+eppsmap %>%
+  addLayersControl(baseGroups = names(esri),
+                   options = layersControlOptions(collapsed = TRUE)) %>%
+  # addMiniMap(tiles = esri[[1]], toggleDisplay = TRUE,
+  #           position = "bottomleft") %>%
+  addMarkers(eppsmap, lng=-96.7478372, lat=32.9886268, popup=findmeat)  %>%
+  htmlwidgets::onRender("
+                        function(el, x) {
+                        var myMap = this;
+                        myMap.on('baselayerchange',
+                        function (e) {
+                        myMap.minimap.changeLayer(L.tileLayer.provider(e.name));
+                        })
+                        }")
+```
+
+
+## 2. Census API Key
+
+
+
+## 3. Spacialdata Examples
+
+```{r, echo = F}
+# Collecting and mapping Census data using API
+# install.packages(c("tidyverse", "ggmap","mapproj", "tidycensus","tigris"))
+# lapply(c("tidyverse", "ggmap","mapproj", "tidycensus","tigris"), require, character.only = TRUE)
+
+# More on Census data: https://rconsortium.github.io/censusguide/r-packages-all.html
+# an API key is required to get Census data for map creation
+# Obtain the key at http://api.census.gov/data/key_signup.html
+# Enter information about organization and email address, then consent
+# Key will be provided to email, click on activate key (wait a few minutes to activate)
+# Store the key using the following function:
+# census_api_key("key", install = TRUE)
+# API key will be stored in  .Renviron and can be accessed by Sys.getenv("CENSUS_API_KEY")
+
+## install.packages("tidycensus","tigris","ggplot2")
+# Substitute with your own Census API key
+
+
+#Only needs to be done once per session
+##census_api_key("543bc01f9454d3fa10f16ade73015de8788c1860", install = TRUE) 
+
+library(tidycensus)
+library(tigris) # Load Census TIGER/Line Shapefiles
+options(tigris_use_cache = TRUE)
+
+# Get a list of American Community Survey (ACS) 2019 variables
+acs19 = tidycensus::load_variables(2019, "acs5", cache = TRUE)
+acs19_Profile = load_variables(2019 , "acs5/profile", cache = TRUE)
+us_median_age19 <- get_acs(
+  geography = "state",
+  variables = "B01002_001",
+  year = 2019,
+  survey = "acs1",
+  geometry = TRUE,
+  resolution = "20m"
+) %>%
+  shift_geometry()
+
+plot(us_median_age19$geometry)
+ggplot(data = us_median_age19, aes(fill = estimate)) + 
+  geom_sf(col="white") +  # Why color is white?
+  theme_bw() +
+  scale_fill_distiller(palette = "PuBuGn",  # Try other palette?
+                       direction = 1) + 
+  labs(title = "  Median Age by State, 2019",
+       caption = "Data source: 2019 1-year ACS, US Census Bureau",
+       fill = "", family="Palatino") +
+  theme(legend.position=c(.08,.6), legend.direction="vertical") +
+  theme(text = element_text(family = "Palatino"), plot.title = element_text(hjust = 0.5))
+
+# Create another map using 2009 and 2020 data and do comparison?
+```
+
+
+```{r, echo = F}
+# Collecting and mapping Census data using API: State data and maps
+# install.packages(c("tidyverse", "ggmap","mapproj", "tidycensus","tigris", "tmap", "mapview"))
+# lapply(c("tidyverse", "ggmap","mapproj", "tidycensus","tigris", "tmap", "mapview"), require, character.only = TRUE)
+
+options(tigris_use_cache = TRUE)
+
+
+tx_income <- get_acs(
+  geography = "tract", 
+  variables = "B19013_001",
+  state = "TX", 
+  year = 2020,
+  geometry = TRUE
+)
+tx_income
+plot(tx_income["estimate"])
+
+
+```
+
+
+
+## 4. Different Year Comparisons
+
+
+```{r, echo = F}
+tx_income <- get_acs(
+  geography = "tract", 
+  variables = "B19013_001",
+  state = "TX", 
+  year = 2010,
+  geometry = TRUE
+)
+tx_income
+plot(tx_income["estimate"])
+```
+
+
+
