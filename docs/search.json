@@ -110,5 +110,12 @@
     "title": "EPPS 6356 Assignment 10",
     "section": "4. Different Year Comparisons",
     "text": "4. Different Year Comparisons\n\n\nGetting data from the 2006-2010 5-year ACS\n\n\nSimple feature collection with 5265 features and 5 fields (with 6 geometries empty)\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: -106.6456 ymin: 25.83738 xmax: -93.51641 ymax: 36.5007\nGeodetic CRS:  NAD83\nFirst 10 features:\n         GEOID                                      NAME   variable estimate\n1  48029110100    Census Tract 1101, Bexar County, Texas B19013_001    24922\n2  48029110300    Census Tract 1103, Bexar County, Texas B19013_001    20841\n3  48029110500    Census Tract 1105, Bexar County, Texas B19013_001    11172\n4  48029120300    Census Tract 1203, Bexar County, Texas B19013_001   104668\n5  48029120702 Census Tract 1207.02, Bexar County, Texas B19013_001    70878\n6  48029121108 Census Tract 1211.08, Bexar County, Texas B19013_001    66781\n7  48029121115 Census Tract 1211.15, Bexar County, Texas B19013_001    76625\n8  48029121120 Census Tract 1211.20, Bexar County, Texas B19013_001    57667\n9  48029121205 Census Tract 1212.05, Bexar County, Texas B19013_001    39630\n10 48029121505 Census Tract 1215.05, Bexar County, Texas B19013_001    51334\n     moe                       geometry\n1   3396 MULTIPOLYGON (((-98.49928 2...\n2   4537 MULTIPOLYGON (((-98.48687 2...\n3   4813 MULTIPOLYGON (((-98.51411 2...\n4  13170 MULTIPOLYGON (((-98.45928 2...\n5   8254 MULTIPOLYGON (((-98.48187 2...\n6  10793 MULTIPOLYGON (((-98.47468 2...\n7   7153 MULTIPOLYGON (((-98.46577 2...\n8   4766 MULTIPOLYGON (((-98.43285 2...\n9   4557 MULTIPOLYGON (((-98.4171 29...\n10  5875 MULTIPOLYGON (((-98.33077 2..."
+  },
+  {
+    "objectID": "Presentation2.html",
+    "href": "Presentation2.html",
+    "title": "Presentation",
+    "section": "",
+    "text": "Introduction\n\n\nCity Summaries\n\n\n\nDescription\n\n\nCity Comparisons\n\n\n\nDescription\n\n\nCity Linear Regressions\n\n\n\nDescription\n\n\nGraphs 2\n\nDescription\n\n\nGraphs 3\n\nDescription"
   }
 ]

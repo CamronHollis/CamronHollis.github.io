@@ -2,7 +2,6 @@
 title: "EPPS 6356 Assignment 1"
 ---
 
-
 ### 1. Anscombe.R
 
 ```{r include=FALSE}
@@ -67,7 +66,6 @@ par(op)
 
 ```
 
-
 ### 2. Generative Art Review
 
 This generative art is produced by Adobe using a 'Generative Fill' tool. The tool was used on famous album covers, generating images beyond the previous borders of the covers, to produce the below results.
@@ -83,7 +81,6 @@ knitr::include_graphics("https://wersm.com/wp-content/uploads/2023/06/wersm-gene
 ```
 
 Respectfully, it does a bad job. The generative art muddies the artistic choices made on the album covers and makes goofy additions. The generative tool is not purposeful nor subtle, and simply creates vaguely related scenes to fill out as much space as the user commands.
-
 
 ### 3. Fall.R
 

@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 1. Leaflet Map
 
-```{r, eval=FALSE, include=FALSE}
+```{r, echo = F}
 ## R Leaflet sample program 
 ## file: spatial_leaflet.R
 ## Create an interactive map for web using ESRI Leaflet

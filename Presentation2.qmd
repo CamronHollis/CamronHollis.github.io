@@ -1,0 +1,92 @@
+---
+title: "Presentation"
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(leaflet)
+library(shiny)
+library(readxl)
+library(tidyverse)
+```
+
+
+```{r, echo = F}
+consolidated_data1 = read_excel("~/Desktop/consolidated-data.xlsx", sheet = "Population & Demographics")
+consolidated_data1 = consolidated_data1[-c(21:24),]
+consolidated_data1 = consolidated_data1 %>% arrange(City)
+
+consolidated_data2 = read_excel("~/Desktop/consolidated-data.xlsx", sheet = "Cost of Living")
+consolidated_data2 = consolidated_data2[-c(21:26),]
+consolidated_data2 = consolidated_data2 %>% arrange(City)
+
+consolidated_data3 = read_excel("~/Desktop/consolidated-data.xlsx", sheet = "Hygiene-Cleanliness")
+consolidated_data3 = consolidated_data3[-c(21:31),]
+consolidated_data3 = consolidated_data3 %>% arrange(City)
+
+consolidated_data4 = read_excel("~/Desktop/consolidated-data.xlsx", sheet = "Health")
+consolidated_data4 = consolidated_data4[-c(21:32),]
+consolidated_data4 = consolidated_data4 %>% arrange(City)
+
+consolidated_data5 = read_excel("~/Desktop/consolidated-data.xlsx", sheet = "Crime Rates ")
+consolidated_data5 = consolidated_data5[-c(21:26),]
+consolidated_data5 = consolidated_data5 %>% arrange(City)
+
+consolidated_data = merge(consolidated_data1, consolidated_data2)
+consolidated_data = merge(consolidated_data, consolidated_data3)
+consolidated_data = merge(consolidated_data, consolidated_data4)
+consolidated_data = merge(consolidated_data, consolidated_data5)
+
+```
+
+```{r, echo = F}
+## Spacial plot for the entire United States
+
+leaflet(data = consolidated_data) %>%
+        addProviderTiles(provider = "CartoDB.Positron", group = "base") %>%
+        addMarkers(lat = 32.9887, lng = -96.7479, popup = "Your current location") %>%
+        addLayersControl(
+          baseGroups = "base",
+          overlayGroups = c("Wellbeing", "Population", "Inequality", "Longevity", "Air Pollution"),
+          options = layersControlOptions(collapsed = T)
+          ) %>%
+        addCircles(lat = ~ Lat,
+                   lng = ~ Long,
+                   label = ~ City,
+                   radius = ~`Estimated Population`/70,
+                   color = "green",
+                   group = "Population"
+        ) %>%
+         addCircles(lat = ~ Lat,
+             lng = ~ Long,
+             label = ~ City,
+             radius = ~ Wellbeing * 900,
+             color = "red",
+             group = "Wellbeing"
+        ) %>%
+        addCircles(lat = ~ Lat,
+             lng = ~ Long,
+             label = ~ City,
+             radius = ~ abs(`Income Inequality`) * 1100,
+             color = "blue",
+             group = "Inequality"
+        ) %>%
+        addCircles(lat = ~ Lat,
+             lng = ~ Long,
+             label = ~ City,
+             radius = ~ `Average Life Expectancy` * 900,
+             color = "orange",
+             group = "Longevity"
+        ) %>%
+         addCircles(lat = ~ Lat,
+             lng = ~ Long,
+             label = ~ City,
+             radius = ~ `Air Pollution - Particulate Matter (Physical Environment)` * 4000,
+             color = "purple",
+             group = "Air Pollution"
+        )
+```
+
+

@@ -34,6 +34,8 @@ website:
 
       - href: https://cometmail-my.sharepoint.com/:p:/g/personal/lmc210001_utdallas_edu/ESEnkabrSQtCsmKwv1_YpJYB8qwrJ2WlTZ-N5So-wCJ3pA?e=SxC00o
         text: Presentation
+      - href: Presentation2.qmd
+        text: Presentation 2
         
 format:
   html:
