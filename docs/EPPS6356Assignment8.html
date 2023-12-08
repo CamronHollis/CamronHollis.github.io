@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CHollis Website Project - Presentation</title>
+<title>CHollis Website Project - EPPS 6356 Assignment 8</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -92,17 +58,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
-<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="site_libs/leaflet-binding-2.2.1/leaflet.js"></script>
-<script src="site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
-<script src="site_libs/leaflet-providers-plugin-2.2.1/leaflet-providers-plugin.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -196,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Presentation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Presentation2.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./Presentation2.html" rel="" target="">
  <span class="menu-text">Presentation 2</span></a>
   </li>  
 </ul>
@@ -211,14 +166,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tabs-test-assignment" id="toc-tabs-test-assignment" class="nav-link active" data-scroll-target="#tabs-test-assignment">Tabs Test Assignment</a>
+  <ul class="collapse">
+  <li><a href="#program-1" id="toc-program-1" class="nav-link" data-scroll-target="#program-1">Program 1</a></li>
+  <li><a href="#program-2" id="toc-program-2" class="nav-link" data-scroll-target="#program-2">Program 2</a></li>
+  <li><a href="#program-3" id="toc-program-3" class="nav-link" data-scroll-target="#program-3">Program 3</a></li>
+  <li><a href="#program-4" id="toc-program-4" class="nav-link" data-scroll-target="#program-4">Program 4</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Presentation</h1>
+<h1 class="title">EPPS 6356 Assignment 8</h1>
 </div>
 
 
@@ -233,61 +200,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<div class="cell">
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-fbd95f8e69d37dc49fd7" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-fbd95f8e69d37dc49fd7">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["CartoDB.Positron",null,"base",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[32.9887,-96.7479,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Your current location",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":["base",["Wellbeing","Population","Inequality","Longevity","Air Pollution"],{"collapsed":true,"autoZIndex":true,"position":"topright"}]},{"method":"addCircles","args":[[33.7488,42.3601,35.2271,41.8781,32.7767,39.7392,42.3314,29.7604,35.0549,25.7617,44.9778,40.7128,39.9526,33.4484,45.5152,32.7157,37.7749,47.6061,27.9517,38.9072],[-84.3877,-71.0589,-80.8431,-87.6298,-96.797,-104.9903,-83.0458,-95.3698,-118.2426,-80.1918,-93.265,-74.006,-75.1652,-112.074,-122.6784,-117.1611,-122.4194,-122.3328,-82.4588,-77.0369],[7130.38571428571,9295.8,12824.5714285714,38071.9857142857,17766.9285714286,10189.3142857143,9219.65714285714,32898.2571428571,54603.4,6421.62857142857,6072.8,125348.371428571,24751.1714285714,27920.1285714286,9072.38571428571,19730.8857142857,12370.4714285714,10703.6571428571,5688.18571428571,9597.18571428571],null,"Population",{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,["Atlanta","Boston","Charlotte","Chicago","Dallas","Denver","Detroit","Houston","Los Angeles","Miami","Minneapolis","New York","Philadelphia","Phoenix","Portland","San Diego","San Francisco","Seattle","Tampa","Washington, D.C."],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[[33.7488,42.3601,35.2271,41.8781,32.7767,39.7392,42.3314,29.7604,35.0549,25.7617,44.9778,40.7128,39.9526,33.4484,45.5152,32.7157,37.7749,47.6061,27.9517,38.9072],[-84.3877,-71.0589,-80.8431,-87.6298,-96.797,-104.9903,-83.0458,-95.3698,-118.2426,-80.1918,-93.265,-74.006,-75.1652,-112.074,-122.6784,-117.1611,-122.4194,-122.3328,-82.4588,-77.0369],[61857,46080,50418,53361,43947,52191,53397,51048,53352,59031,52065,47124,52164,44307,57582,27540,51705,56367,52821,41067],null,"Wellbeing",{"interactive":true,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,["Atlanta","Boston","Charlotte","Chicago","Dallas","Denver","Detroit","Houston","Los Angeles","Miami","Minneapolis","New York","Philadelphia","Phoenix","Portland","San Diego","San Francisco","Seattle","Tampa","Washington, D.C."],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[[33.7488,42.3601,35.2271,41.8781,32.7767,39.7392,42.3314,29.7604,35.0549,25.7617,44.9778,40.7128,39.9526,33.4484,45.5152,32.7157,37.7749,47.6061,27.9517,38.9072],[-84.3877,-71.0589,-80.8431,-87.6298,-96.797,-104.9903,-83.0458,-95.3698,-118.2426,-80.1918,-93.265,-74.006,-75.1652,-112.074,-122.6784,-117.1611,-122.4194,-122.3328,-82.4588,-77.0369],[4620,1430,880,8030,10560,4620,43890,12980,3410,24750,3960,3300,22000,6050,2750,11550,27060,21560,9680,13090],null,"Inequality",{"interactive":true,"className":"","stroke":true,"color":"blue","weight":5,"opacity":0.5,"fill":true,"fillColor":"blue","fillOpacity":0.2},null,null,["Atlanta","Boston","Charlotte","Chicago","Dallas","Denver","Detroit","Houston","Los Angeles","Miami","Minneapolis","New York","Philadelphia","Phoenix","Portland","San Diego","San Francisco","Seattle","Tampa","Washington, D.C."],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[[33.7488,42.3601,35.2271,41.8781,32.7767,39.7392,42.3314,29.7604,35.0549,25.7617,44.9778,40.7128,39.9526,33.4484,45.5152,32.7157,37.7749,47.6061,27.9517,38.9072],[-84.3877,-71.0589,-80.8431,-87.6298,-96.797,-104.9903,-83.0458,-95.3698,-118.2426,-80.1918,-93.265,-74.006,-75.1652,-112.074,-122.6784,-117.1611,-122.4194,-122.3328,-82.4588,-77.0369],[69660,82800,72360,69120,70470,71730,62100,71010,74160,74160,71190,69930,68400,63900,71640,72540,74700,65160,71190,71280],null,"Longevity",{"interactive":true,"className":"","stroke":true,"color":"orange","weight":5,"opacity":0.5,"fill":true,"fillColor":"orange","fillOpacity":0.2},null,null,["Atlanta","Boston","Charlotte","Chicago","Dallas","Denver","Detroit","Houston","Los Angeles","Miami","Minneapolis","New York","Philadelphia","Phoenix","Portland","San Diego","San Francisco","Seattle","Tampa","Washington, D.C."],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[[33.7488,42.3601,35.2271,41.8781,32.7767,39.7392,42.3314,29.7604,35.0549,25.7617,44.9778,40.7128,39.9526,33.4484,45.5152,32.7157,37.7749,47.6061,27.9517,38.9072],[-84.3877,-71.0589,-80.8431,-87.6298,-96.797,-104.9903,-83.0458,-95.3698,-118.2426,-80.1918,-93.265,-74.006,-75.1652,-112.074,-122.6784,-117.1611,-122.4194,-122.3328,-82.4588,-77.0369],[32800,34800,48000,58400,36400,31200,57600,33600,39600,31200,36000,35200,45200,64400,32800,57600,35200,24000,32800,40800],null,"Air Pollution",{"interactive":true,"className":"","stroke":true,"color":"purple","weight":5,"opacity":0.5,"fill":true,"fillColor":"purple","fillOpacity":0.2},null,null,["Atlanta","Boston","Charlotte","Chicago","Dallas","Denver","Detroit","Houston","Los Angeles","Miami","Minneapolis","New York","Philadelphia","Phoenix","Portland","San Diego","San Francisco","Seattle","Tampa","Washington, D.C."],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]}],"limits":{"lat":[25.7617,47.6061],"lng":[-122.6784,-71.0589]}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(<span class="at">data =</span> consolidated_data,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    Wellbeing <span class="sc">~</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">`</span><span class="at">Average Life Expectancy</span><span class="st">`</span> <span class="sc">+</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">`</span><span class="at">Air Pollution - Particulate Matter (Physical Environment)</span><span class="st">`</span> <span class="sc">+</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">`</span><span class="at">Violent Crime Rate</span><span class="st">`</span> <span class="sc">+</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">`</span><span class="at">Income Inequality</span><span class="st">`</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = Wellbeing ~ `Average Life Expectancy` + `Air Pollution - Particulate Matter (Physical Environment)` + 
-    `Violent Crime Rate` + `Income Inequality`, data = consolidated_data)
-
-Residuals:
-     Min       1Q   Median       3Q      Max 
--13.0600  -2.8687   0.2616   4.7936  10.7743 
-
-Coefficients:
-                                                              Estimate
-(Intercept)                                                 113.275644
-`Average Life Expectancy`                                    -0.469615
-`Air Pollution - Particulate Matter (Physical Environment)`  -2.014067
-`Violent Crime Rate`                                         -0.001713
-`Income Inequality`                                          -0.229264
-                                                            Std. Error t value
-(Intercept)                                                  33.133613   3.419
-`Average Life Expectancy`                                     0.379396  -1.238
-`Air Pollution - Particulate Matter (Physical Environment)`   0.633859  -3.177
-`Violent Crime Rate`                                          0.008297  -0.206
-`Income Inequality`                                           0.128346  -1.786
-                                                            Pr(&gt;|t|)   
-(Intercept)                                                  0.00381 **
-`Average Life Expectancy`                                    0.23482   
-`Air Pollution - Particulate Matter (Physical Environment)`  0.00625 **
-`Violent Crime Rate`                                         0.83921   
-`Income Inequality`                                          0.09428 . 
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 6.871 on 15 degrees of freedom
-Multiple R-squared:  0.4559,    Adjusted R-squared:  0.3108 
-F-statistic: 3.142 on 4 and 15 DF,  p-value: 0.04603</code></pre>
-</div>
-</div>
+<section id="tabs-test-assignment" class="level1 tabset">
+<h1 class="tabset">Tabs Test Assignment</h1>
+<section id="program-1" class="level2">
+<h2 class="anchored" data-anchor-id="program-1">Program 1</h2>
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/individualcity/" style="border: non; width: 100%; height: 600px" frameborder="no">
+</iframe>
+</section>
+<section id="program-2" class="level2">
+<h2 class="anchored" data-anchor-id="program-2">Program 2</h2>
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/allcities/" style="border: non; width: 100%; height: 600px" frameborder="no">
+</iframe>
+<hr>
+<p>These Shiny Apps will be used for final presentation.</p>
+</section>
+<section id="program-3" class="level2">
+<h2 class="anchored" data-anchor-id="program-3">Program 3</h2>
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/cityinfo/" style="border: non; width: 100%; height: 600px" frameborder="no">
+</iframe>
+</section>
+<section id="program-4" class="level2">
+<h2 class="anchored" data-anchor-id="program-4">Program 4</h2>
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/correlation/" style="border: non; width: 100%; height: 600px" frameborder="no">
+</iframe>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

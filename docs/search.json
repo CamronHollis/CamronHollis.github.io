@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CHollis Website Project",
     "section": "",
-    "text": "This website was made to satisfy the requirements of the Fall 2023 Data Visualization class."
+    "text": "This website was made to satisfy the requirements of the Fall 2023 Data Visualization class.\nNot all webpages have been recently rendered with updated menus, so if you can not find a page please return to this index homepage to navigate to more recent pages."
   },
   {
     "objectID": "about.html",
@@ -95,7 +95,7 @@
     "href": "EPPS6356Assignment10.html#census-api-key",
     "title": "EPPS 6356 Assignment 10",
     "section": "2. Census API Key",
-    "text": "2. Census API Key"
+    "text": "2. Census API Key\nCensus Key has been received but I won’t be sharing it. :)"
   },
   {
     "objectID": "EPPS6356Assignment10.html#spacialdata-examples",
@@ -116,6 +116,48 @@
     "href": "Presentation2.html",
     "title": "Presentation",
     "section": "",
-    "text": "Introduction\n\n\nCity Summaries\n\n\n\nDescription\n\n\nCity Comparisons\n\n\n\nDescription\n\n\nCity Linear Regressions\n\n\n\nDescription\n\n\nGraphs 2\n\nDescription\n\n\nGraphs 3\n\nDescription"
+    "text": "summary(\n  lm(data = consolidated_data,\n    Wellbeing ~\n      `Average Life Expectancy` +\n      `Air Pollution - Particulate Matter (Physical Environment)` +\n      `Violent Crime Rate` +\n      `Income Inequality`\n  )\n)\n\n\nCall:\nlm(formula = Wellbeing ~ `Average Life Expectancy` + `Air Pollution - Particulate Matter (Physical Environment)` + \n    `Violent Crime Rate` + `Income Inequality`, data = consolidated_data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-13.0600  -2.8687   0.2616   4.7936  10.7743 \n\nCoefficients:\n                                                              Estimate\n(Intercept)                                                 113.275644\n`Average Life Expectancy`                                    -0.469615\n`Air Pollution - Particulate Matter (Physical Environment)`  -2.014067\n`Violent Crime Rate`                                         -0.001713\n`Income Inequality`                                          -0.229264\n                                                            Std. Error t value\n(Intercept)                                                  33.133613   3.419\n`Average Life Expectancy`                                     0.379396  -1.238\n`Air Pollution - Particulate Matter (Physical Environment)`   0.633859  -3.177\n`Violent Crime Rate`                                          0.008297  -0.206\n`Income Inequality`                                           0.128346  -1.786\n                                                            Pr(&gt;|t|)   \n(Intercept)                                                  0.00381 **\n`Average Life Expectancy`                                    0.23482   \n`Air Pollution - Particulate Matter (Physical Environment)`  0.00625 **\n`Violent Crime Rate`                                         0.83921   \n`Income Inequality`                                          0.09428 . \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.871 on 15 degrees of freedom\nMultiple R-squared:  0.4559,    Adjusted R-squared:  0.3108 \nF-statistic: 3.142 on 4 and 15 DF,  p-value: 0.04603"
+  },
+  {
+    "objectID": "EPPS6356Assignment8.html",
+    "href": "EPPS6356Assignment8.html",
+    "title": "EPPS 6356 Assignment 8",
+    "section": "",
+    "text": "These Shiny Apps will be used for final presentation."
+  },
+  {
+    "objectID": "EPPS6356Assignment8.html#tab-1",
+    "href": "EPPS6356Assignment8.html#tab-1",
+    "title": "EPPS 6356 Assignment 8",
+    "section": "",
+    "text": "Content for the first tab goes here."
+  },
+  {
+    "objectID": "EPPS6356Assignment8.html#tab-2",
+    "href": "EPPS6356Assignment8.html#tab-2",
+    "title": "EPPS 6356 Assignment 8",
+    "section": "",
+    "text": "Content for the second tab goes here.\n\nTest"
+  },
+  {
+    "objectID": "EPPS6356Assignment8.html#tab-3",
+    "href": "EPPS6356Assignment8.html#tab-3",
+    "title": "EPPS 6356 Assignment 8",
+    "section": "",
+    "text": "Content for the third tab goes here."
+  },
+  {
+    "objectID": "EPPS6356Assignment8.html#program-1",
+    "href": "EPPS6356Assignment8.html#program-1",
+    "title": "EPPS 6356 Assignment 8",
+    "section": "",
+    "text": "&lt;/section&gt;\n&lt;section id=\"program-2\" class=\"level2\"&gt;\n&lt;h2&gt;Program 2&lt;/h2&gt;\n&lt;iframe id=\"Cities ASL data\" src=\"https://laurencampbell17.shinyapps.io/allcities/\" style=\"border: non; width: 100%; height: 600px\" frameborder=\"no\"&gt;\n\n\nThese Shiny Apps will be used for final presentation."
+  },
+  {
+    "objectID": "EPPS6356Assignment8.html#program-2",
+    "href": "EPPS6356Assignment8.html#program-2",
+    "title": "EPPS 6356 Assignment 8",
+    "section": "",
+    "text": "These Shiny Apps will be used for final presentation."
   }
 ]

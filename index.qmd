@@ -3,3 +3,5 @@ title: "CHollis Website Project"
 ---
 
 This website was made to satisfy the requirements of the Fall 2023 Data Visualization class.
+
+Not all webpages have been recently rendered with updated menus, so if you can not find a page please return to this index homepage to navigate to more recent pages.

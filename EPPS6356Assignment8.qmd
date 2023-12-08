@@ -1,0 +1,38 @@
+---
+title: "EPPS 6356 Assignment 8"
+output:
+  quarto::quarto_html:
+    self_contained: false
+---
+
+# Tabs Test Assignment {.tabset}
+
+## Program 1
+
+
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/individualcity/" style="border: non; width: 100%; height: 600px" frameborder="no">
+
+</iframe>
+
+## Program 2
+
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/allcities/" style="border: non; width: 100%; height: 600px" frameborder="no">
+
+</iframe>
+
+***
+These Shiny Apps will be used for final presentation.
+
+
+## Program 3
+
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/cityinfo/" style="border: non; width: 100%; height: 600px" frameborder="no">
+
+</iframe>
+
+## Program 4
+
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/correlation/" style="border: non; width: 100%; height: 600px" frameborder="no">
+
+</iframe>
+

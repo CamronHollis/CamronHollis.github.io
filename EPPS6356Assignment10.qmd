@@ -1,7 +1,9 @@
 ---
 title: "EPPS 6356 Assignment 10"
+format:
+  html:
+    code-fold: true
 ---
-
 
 ```{r include=FALSE, echo = F, warning = F}
 library(ggplot2)
@@ -14,7 +16,6 @@ library(tidycensus)
 
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
 
 ## 1. Leaflet Map
 
@@ -68,9 +69,9 @@ eppsmap %>%
                         }")
 ```
 
-
 ## 2. Census API Key
 
+Census Key has been received but I won't be sharing it. :)
 
 
 ## 3. Spacialdata Examples
@@ -128,7 +129,6 @@ ggplot(data = us_median_age19, aes(fill = estimate)) +
 # Create another map using 2009 and 2020 data and do comparison?
 ```
 
-
 ```{r, echo = F}
 # Collecting and mapping Census data using API: State data and maps
 # install.packages(c("tidyverse", "ggmap","mapproj", "tidycensus","tigris", "tmap", "mapview"))
@@ -150,10 +150,7 @@ plot(tx_income["estimate"])
 
 ```
 
-
-
 ## 4. Different Year Comparisons
-
 
 ```{r, echo = F}
 tx_income <- get_acs(
@@ -166,6 +163,3 @@ tx_income <- get_acs(
 tx_income
 plot(tx_income["estimate"])
 ```
-
-
-

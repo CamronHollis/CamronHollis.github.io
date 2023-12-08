@@ -90,3 +90,21 @@ leaflet(data = consolidated_data) %>%
 ```
 
 
+
+```{r}
+summary(
+  lm(data = consolidated_data,
+    Wellbeing ~
+      `Average Life Expectancy` +
+      `Air Pollution - Particulate Matter (Physical Environment)` +
+      `Violent Crime Rate` +
+      `Income Inequality`
+  )
+)
+  
+```
+
+
+
+
+
