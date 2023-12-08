@@ -4,4 +4,4 @@ title: "EPPS 6356 Assignment 8"
 
 Quarto doesn't have flexdashboard capability, so I am linking to the markdown html document.
 
-[Link FlexDashboard Document](https://<username>.github.io/63Presentation.html)
+[Link FlexDashboard Document](https://camronhollis.github.io/63Presentation.html)

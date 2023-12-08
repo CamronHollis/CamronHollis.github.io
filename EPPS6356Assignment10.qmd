@@ -71,12 +71,13 @@ eppsmap %>%
 
 ## 2. Census API Key
 
-Census Key has been received but I won't be sharing it. :)
+Census Key has been received, allowing use of the tidycensus package.
 
 
 ## 3. Spacialdata Examples
 
-```{r, echo = F}
+Spacialdata1.R
+```{r, echo = F, message=F}
 # Collecting and mapping Census data using API
 # install.packages(c("tidyverse", "ggmap","mapproj", "tidycensus","tigris"))
 # lapply(c("tidyverse", "ggmap","mapproj", "tidycensus","tigris"), require, character.only = TRUE)
@@ -116,9 +117,9 @@ us_median_age19 <- get_acs(
 
 plot(us_median_age19$geometry)
 ggplot(data = us_median_age19, aes(fill = estimate)) + 
-  geom_sf(col="white") +  # Why color is white?
+  geom_sf(col="black") +  # Why color is white?
   theme_bw() +
-  scale_fill_distiller(palette = "PuBuGn",  # Try other palette?
+  scale_fill_distiller(palette = "Spectral",  # Try other palette?
                        direction = 1) + 
   labs(title = "  Median Age by State, 2019",
        caption = "Data source: 2019 1-year ACS, US Census Bureau",
@@ -129,7 +130,8 @@ ggplot(data = us_median_age19, aes(fill = estimate)) +
 # Create another map using 2009 and 2020 data and do comparison?
 ```
 
-```{r, echo = F}
+Spacialdata2.R using 2020 data
+```{r, echo = F, message=F, results='hide'}
 # Collecting and mapping Census data using API: State data and maps
 # install.packages(c("tidyverse", "ggmap","mapproj", "tidycensus","tigris", "tmap", "mapview"))
 # lapply(c("tidyverse", "ggmap","mapproj", "tidycensus","tigris", "tmap", "mapview"), require, character.only = TRUE)
@@ -152,7 +154,8 @@ plot(tx_income["estimate"])
 
 ## 4. Different Year Comparisons
 
-```{r, echo = F}
+Spacialdata2.R using 2010 data
+```{r, echo = F, message=F, results='hide'}
 tx_income <- get_acs(
   geography = "tract", 
   variables = "B19013_001",
@@ -163,3 +166,5 @@ tx_income <- get_acs(
 tx_income
 plot(tx_income["estimate"])
 ```
+
+Compared to the 2020 data, the 2010 data shows less density and more complete data.
