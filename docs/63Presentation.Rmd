@@ -1,0 +1,58 @@
+---
+title: "Presentation"
+output: 
+  flexdashboard::flex_dashboard:
+    storyboard: true
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+### City Summaries
+
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/individualcity/" style="border: non; width: 100%; height: 600px" frameborder="no">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+Description
+
+This Shiny App is going to be a part of the final presentation.
+
+### City Comparisons
+
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/allcities/" style="border: non; width: 100%; height: 600px" frameborder="no">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+Description
+
+This Shiny App is going to be a part of the final presentation.
+
+### City Linear Regressions
+
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/cityinfo/" style="border: non; width: 100%; height: 600px" frameborder="no">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+Description
+
+This Shiny App is going to be a part of the final presentation.
+
+### Regressions With Wellbeing
+
+<iframe id="Cities ASL data" src="https://laurencampbell17.shinyapps.io/correlation/" style="border: non; width: 100%; height: 600px" frameborder="no">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+Description
+
+This Shiny App is going to be a part of the final presentation.
