@@ -1,6 +1,11 @@
 ---
-title: "Presentation"
+title: "Presentation: Unused Map Visualization"
+format:
+  html:
+    code-fold: true
 ---
+
+This map did not work in time for the presentation. Use the layers of the map to compare cities one variable at a time. 
 
 ```{r setup, include=FALSE}
 
@@ -11,7 +16,6 @@ library(shiny)
 library(readxl)
 library(tidyverse)
 ```
-
 
 ```{r, echo = F}
 consolidated_data1 = read_excel("~/Desktop/consolidated-data.xlsx", sheet = "Population & Demographics")
@@ -89,8 +93,6 @@ leaflet(data = consolidated_data) %>%
         )
 ```
 
-
-
 ```{r}
 summary(
   lm(data = consolidated_data,
@@ -103,8 +105,3 @@ summary(
 )
   
 ```
-
-
-
-
-

@@ -1,7 +1,9 @@
 ---
 title: "EPPS 6356 Assignment 5"
+format:
+  html:
+    code-fold: true
 ---
-
 
 ```{r include=F}
 library(ggplot2)
@@ -11,7 +13,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ### 1. R Graphics
-
 
 ```{r}
 
@@ -61,8 +62,6 @@ plot(iris$Sepal.Length, iris$Sepal.Width,
 
 ```
 
-
-
 ### 2. ggplot2
 
 ```{r}
@@ -97,6 +96,3 @@ ggplot(data = iris) +
 
 
 ```
-
-
-

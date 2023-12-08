@@ -1,7 +1,9 @@
 ---
 title: "EPPS 6356 Assignment 4"
+format:
+  html:
+    code-fold: true
 ---
-
 
 ```{r include=T}
 library(ggplot2)
@@ -9,7 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```
-
 
 ### Chart 1: Variable Width Column Chart
 
@@ -26,7 +27,6 @@ owidnewyear2 = subset(owidnewyear2, location !=
   "Gibraltar")
 
 ```
-
 
 ```{r echo = T, warning = F}
 #plot(x = owidnewyear$population_density,y = owidnewyear$total_cases)
@@ -68,9 +68,7 @@ ggplot(data = owidnewyear2,
 
 ```
 
-
 ### Chart 2: Table with Embedded Charts
-
 
 ```{r echo = T}
 
@@ -137,9 +135,7 @@ ggplot(data = owidnewyear2,
          )
 ```
 
-
 ### 3. Bar Chart
-
 
 ```{r echo=T, warning=FALSE}
 ## Download COVID data from OWID GitHub
@@ -165,9 +161,7 @@ base + labs(title = "2021 Covid Deaths in South America", x = "Deaths per Millio
   plot.title = element_text(hjust = 0.5))
 ```
 
-
 ### 4. Column Chart
-
 
 ```{r echo = T, warning= F, message= F}
 
@@ -193,8 +187,6 @@ base + scale_x_date(date_labels = "%d", date_break = "1 day") +
   labs(title = "Italian Covid Cases vs Deaths in May 2020", y = "Frequency", x = "Date", colour = "Legend")
 ```
 
-
-
 ```{r eval = F, echo = F }
 ggplot(data= (subset(owideu, location == "Italy")), aes(x=date)) +
   geom_bar(aes(y=log(new_cases)), stat="identity", position ="identity", alpha=.3, fill='lightblue', color='lightblue4') +
@@ -210,8 +202,3 @@ ggplot(data= (subset(owideu, location == "Italy")), aes(x=date)) +
     color = "black"
   )
 ```
-
-
-
-
-

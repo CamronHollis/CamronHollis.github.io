@@ -1,0 +1,15 @@
+---
+title: "EPPS 6356 Assignment 7 Hackathon 2"
+---
+
+Hackathon 2 Submission- [Team main version](https://laurencampbell17.github.io/laurencampbell17/posts/hackathon2.html)
+
+Scatter Plot
+
+<iframe height="600" width="100%" frameborder="no" src="https://laurencampbell17.shinyapps.io/myshiny/">
+
+</iframe>
+
+Bubble Chart <iframe height="600" width="100%" frameborder="no" src="https://camronhollis.shinyapps.io/EPPS6356Assignment7/"> </iframe>
+
+Line Chart <iframe height="600" width="100%" frameborder="no" src="https://laurencampbell17.shinyapps.io/line/"> </iframe>

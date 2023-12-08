@@ -123,10 +123,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-5356" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">EPPS 5356</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6356-assignments" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">EPPS 6356 Assignments</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-epps-5356">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-epps-6356-assignments">    
         <li>
     <a class="dropdown-item" href="./EPPS6356Assignment1.html" rel="" target="">
  <span class="dropdown-text">Assignment 1</span></a>
@@ -142,6 +142,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li>
     <a class="dropdown-item" href="./EPPS6356Assignment4.html" rel="" target="">
  <span class="dropdown-text">Assignment 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./EPPS6356Assignment5.html" rel="" target="">
+ <span class="dropdown-text">Assignment 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./EPPS6356Assignment6.html" rel="" target="">
+ <span class="dropdown-text">Assignment 6</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./EPPS6356Assignment7.html" rel="" target="">
+ <span class="dropdown-text">Assignment 7</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./EPPS6356Assignment8.html" rel="" target="">
+ <span class="dropdown-text">Assignment 8</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./EPPS6356Assignment9.html" rel="" target="">
+ <span class="dropdown-text">Assignment 9</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./EPPS6356Assignment10.html" rel="" target="">
+ <span class="dropdown-text">Assignment 10</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6356-hackathons" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">EPPS 6356 Hackathons</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-epps-6356-hackathons">    
+        <li>
+    <a class="dropdown-item" href="./EPPS6356Assignment4.html" rel="" target="">
+ <span class="dropdown-text">Assignment 4 Hackathon</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./EPPS6356Assignment7.html" rel="" target="">
+ <span class="dropdown-text">Assignment 7 Hackathon</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6356-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">EPPS 6356 Presentations</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-epps-6356-presentations">    
+        <li>
+    <a class="dropdown-item" href="https://cometmail-my.sharepoint.com/:p:/g/personal/lmc210001_utdallas_edu/ESEnkabrSQtCsmKwv1_YpJYB8qwrJ2WlTZ-N5So-wCJ3pA?e=SxC00o" rel="" target="">
+ <span class="dropdown-text">Presentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Presentation2.html" rel="" target="">
+ <span class="dropdown-text">Presentation 2</span></a>
   </li>  
     </ul>
   </li>
@@ -189,12 +243,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <section id="chart-1-variable-width-column-chart" class="level3">
 <h3 class="anchored" data-anchor-id="chart-1-variable-width-column-chart">Chart 1: Variable Width Column Chart</h3>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>owidall <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"http://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv?raw=true"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>owidall <span class="ot">=</span> owidall[<span class="sc">!</span><span class="fu">grepl</span>(<span class="st">"^OWID"</span>, owidall<span class="sc">$</span>iso_code), ]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>owideu <span class="ot">=</span> <span class="fu">subset</span>(owidall, continent<span class="sc">==</span><span class="st">"Europe"</span>)</span>
@@ -205,8 +264,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Europe"</span>)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>owidnewyear2 <span class="ot">=</span> <span class="fu">subset</span>(owidnewyear2, location <span class="sc">!=</span> </span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Gibraltar"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(x = owidnewyear$population_density,y = owidnewyear$total_cases)</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>w <span class="ot">=</span> owidnewyear2<span class="sc">$</span>population_density</span>
@@ -243,6 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Country; Bar width is relative population density"</span>,</span>
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="st">"Total cases as of Jan 1st, 2023 (log)"</span></span>
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="EPPS6356Assignment4_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -251,6 +314,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="chart-2-table-with-embedded-charts" class="level3">
 <h3 class="anchored" data-anchor-id="chart-2-table-with-embedded-charts">Chart 2: Table with Embedded Charts</h3>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>) )</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(</span>
@@ -312,6 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">legend</span>(<span class="at">x =</span> <span class="st">"topright"</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Iran"</span>,<span class="st">"Aghanistan"</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"red3"</span>,<span class="st">"salmon"</span>),</span>
 <span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>         <span class="at">lty =</span> <span class="dv">1</span></span>
 <span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>         )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="EPPS6356Assignment4_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -320,6 +386,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="bar-chart" class="level3">
 <h3 class="anchored" data-anchor-id="bar-chart">3. Bar Chart</h3>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Download COVID data from OWID GitHub</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Deselect cases/rows with OWID</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="do">## owidall1 = owidall[!grepl("^OWID", owidall$iso_code), ]</span></span>
@@ -341,6 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>                                          <span class="at">size =</span> <span class="fl">0.5</span>,</span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>                                          <span class="at">linetype =</span> <span class="dv">2</span>),</span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="EPPS6356Assignment4_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -349,6 +418,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="column-chart" class="level3">
 <h3 class="anchored" data-anchor-id="column-chart">4. Column Chart</h3>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">##owidall1 = owidall[!grepl("^OWID", owidall$iso_code), ]</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Subset by country: Italy</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>italy <span class="ot">=</span> <span class="fu">subset</span>(owidall, location<span class="sc">==</span><span class="st">"Italy"</span>)</span>
@@ -369,6 +440,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">axis.ticks.x=</span><span class="fu">element_blank</span>(), <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.position=</span><span class="st">"bottom"</span>) <span class="sc">+</span> </span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Italian Covid Cases vs Deaths in May 2020"</span>, <span class="at">y =</span> <span class="st">"Frequency"</span>, <span class="at">x =</span> <span class="st">"Date"</span>, <span class="at">colour =</span> <span class="st">"Legend"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="EPPS6356Assignment4_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>

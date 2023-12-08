@@ -1,5 +1,5 @@
 ---
-title: "Presentation"
+title: "Flex Dashboard Demonstration with Presentation info"
 output: 
   flexdashboard::flex_dashboard:
     storyboard: true
@@ -19,7 +19,7 @@ library(flexdashboard)
 
 Description
 
-This Shiny App is going to be a part of the final presentation.
+This Shiny App, Within City Comparisons, is going to be a part of the final presentation.
 
 ### City Comparisons
 
@@ -31,7 +31,7 @@ This Shiny App is going to be a part of the final presentation.
 
 Description
 
-This Shiny App is going to be a part of the final presentation.
+This Shiny App, Between City Comparisons, is going to be a part of the final presentation.
 
 ### City Linear Regressions
 
@@ -43,7 +43,7 @@ This Shiny App is going to be a part of the final presentation.
 
 Description
 
-This Shiny App is going to be a part of the final presentation.
+This Shiny App, Variable-Variable Comparisons, is going to be a part of the final presentation.
 
 ### Regressions With Wellbeing
 
@@ -55,4 +55,4 @@ This Shiny App is going to be a part of the final presentation.
 
 Description
 
-This Shiny App is going to be a part of the final presentation.
+This Shiny App, Wellbeing-Catagory Comparisons is going to be a part of the final presentation.

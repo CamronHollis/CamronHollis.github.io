@@ -123,10 +123,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-5356-assignments" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">EPPS 5356 Assignments</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6356-assignments" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">EPPS 6356 Assignments</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-epps-5356-assignments">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-epps-6356-assignments">    
         <li>
     <a class="dropdown-item" href="./EPPS6356Assignment1.html" rel="" target="">
  <span class="dropdown-text">Assignment 1</span></a>
@@ -152,6 +152,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">Assignment 6</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./EPPS6356Assignment7.html" rel="" target="">
+ <span class="dropdown-text">Assignment 7</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./EPPS6356Assignment8.html" rel="" target="">
  <span class="dropdown-text">Assignment 8</span></a>
   </li>  
@@ -166,28 +170,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-5356-hackathons" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">EPPS 5356 Hackathons</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6356-hackathons" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">EPPS 6356 Hackathons</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-epps-5356-hackathons">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-epps-6356-hackathons">    
         <li>
     <a class="dropdown-item" href="./EPPS6356Assignment4.html" rel="" target="">
  <span class="dropdown-text">Assignment 4 Hackathon</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://laurencampbell17.github.io/laurencampbell17/posts/hackathon2.html" rel="" target="">
+    <a class="dropdown-item" href="./EPPS6356Assignment7.html" rel="" target="">
  <span class="dropdown-text">Assignment 7 Hackathon</span></a>
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="https://cometmail-my.sharepoint.com/:p:/g/personal/lmc210001_utdallas_edu/ESEnkabrSQtCsmKwv1_YpJYB8qwrJ2WlTZ-N5So-wCJ3pA?e=SxC00o" rel="" target="">
- <span class="menu-text">Presentation</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6356-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">EPPS 6356 Presentations</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-epps-6356-presentations">    
+        <li>
+    <a class="dropdown-item" href="https://cometmail-my.sharepoint.com/:p:/g/personal/lmc210001_utdallas_edu/ESEnkabrSQtCsmKwv1_YpJYB8qwrJ2WlTZ-N5So-wCJ3pA?e=SxC00o" rel="" target="">
+ <span class="dropdown-text">Presentation</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Presentation2.html" rel="" target="">
- <span class="menu-text">Presentation 2</span></a>
+        <li>
+    <a class="dropdown-item" href="./Presentation2.html" rel="" target="">
+ <span class="dropdown-text">Presentation 2</span></a>
   </li>  
+    </ul>
+  </li>
 </ul>
             <div class="quarto-navbar-tools ms-auto">
 </div>
@@ -232,10 +243,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="bbbyq" class="level3">
 <h3 class="anchored" data-anchor-id="bbbyq">1. BBBYQ</h3>
-<p>The stock value of the defunct and dead memestock, BBBYQ. This xts object goes from January 1st 2020, to June 30th, 2023</p>
+<p>The stock value of the dying memestock, GME, from its massive rise to its slow downward trajectory. This xts object goes from January 1st 2020, to June 30th, 2023</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "BBBYQ"</code></pre>
+<pre><code>[1] "GME"</code></pre>
 </div>
 <div class="cell-output-display">
 <p><img src="EPPS6356Assignment9_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
@@ -246,26 +257,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="variables">2. Variables</h3>
 <p>The xts object has is indexed by time, with each observation being one sequential day. Each observation has the stock ticker open, high, low, and close value.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(BBBYQ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(GME)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "xts" "zoo"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(BBBYQ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(GME)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
-<pre><code>     Index              BBBYQ.Open        BBBYQ.High        BBBYQ.Low     
- Min.   :2020-01-02   Min.   : 0.0483   Min.   : 0.1009   Min.   : 0.048  
- 1st Qu.:2020-11-12   1st Qu.: 5.2775   1st Qu.: 5.7175   1st Qu.: 4.985  
- Median :2021-09-29   Median :12.9350   Median :13.7700   Median :12.440  
- Mean   :2021-09-30   Mean   :13.9365   Mean   :14.5584   Mean   :13.390  
- 3rd Qu.:2022-08-15   3rd Qu.:21.7312   3rd Qu.:22.6750   3rd Qu.:21.060  
- Max.   :2023-06-30   Max.   :42.9800   Max.   :53.9000   Max.   :41.117  
-  BBBYQ.Close       BBBYQ.Volume       BBBYQ.Adjusted   
- Min.   : 0.0751   Min.   :  1092694   Min.   : 0.0751  
- 1st Qu.: 5.2975   1st Qu.:  4808161   1st Qu.: 5.2975  
- Median :13.0250   Median :  8098816   Median :13.0250  
- Mean   :13.9094   Mean   : 23515786   Mean   :13.8930  
- 3rd Qu.:21.7925   3rd Qu.: 14734654   3rd Qu.:21.7925  
- Max.   :52.8900   Max.   :962558838   Max.   :52.8900  </code></pre>
+<pre><code>     Index               GME.Open          GME.High          GME.Low       
+ Min.   :2020-01-02   Min.   : 0.7125   Min.   :  0.735   Min.   : 0.6425  
+ 1st Qu.:2020-11-12   1st Qu.: 3.2662   1st Qu.:  3.504   1st Qu.: 3.1313  
+ Median :2021-09-29   Median :24.6800   Median : 25.707   Median :23.7563  
+ Mean   :2021-09-30   Mean   :24.1940   Mean   : 25.484   Mean   :22.9670  
+ 3rd Qu.:2022-08-15   3rd Qu.:37.9963   3rd Qu.: 39.733   3rd Qu.:36.3344  
+ Max.   :2023-06-30   Max.   :94.9275   Max.   :120.750   Max.   :72.8775  
+   GME.Close        GME.Volume         GME.Adjusted   
+ Min.   : 0.700   Min.   :  1122700   Min.   : 0.700  
+ 1st Qu.: 3.354   1st Qu.:  5410800   1st Qu.: 3.354  
+ Median :24.614   Median : 10725400   Median :24.614  
+ Mean   :24.102   Mean   : 27994935   Mean   :24.102  
+ 3rd Qu.:37.933   3rd Qu.: 22084600   3rd Qu.:37.933  
+ Max.   :86.877   Max.   :788631600   Max.   :86.877  </code></pre>
 </div>
 </div>
 </section>
@@ -287,16 +304,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="stationarity-analysis" class="level4">
 <h4 class="anchored" data-anchor-id="stationarity-analysis">Stationarity analysis</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">diff</span>(BBBYQ),</span>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">diff</span>(GME),</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">lwd =</span> <span class="fl">0.5</span>,</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"First differences, i.e. daily gain, and month-smoothed value"</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="EPPS6356Assignment9_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">diff</span>(<span class="fu">rollmean</span>(BBBYQ, <span class="dv">14</span>, <span class="at">align =</span> <span class="st">"center"</span>) ),</span>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">diff</span>(<span class="fu">rollmean</span>(GME, <span class="dv">14</span>, <span class="at">align =</span> <span class="st">"center"</span>) ),</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">"red"</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="EPPS6356Assignment9_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid" width="672"></p>
 </div>

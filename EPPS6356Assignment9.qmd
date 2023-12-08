@@ -1,7 +1,9 @@
 ---
 title: "EPPS 6356 Assignment 9"
+format:
+  html:
+    code-fold: true
 ---
-
 
 ```{r include=FALSE, echo = F, warning = F}
 library(ggplot2)
@@ -11,23 +13,22 @@ library(quantmod)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 ### 1. BBBYQ
 
-The stock value of the defunct and dead memestock, BBBYQ. This xts object goes from January 1st 2020, to  June 30th, 2023
+The stock value of the dying memestock, GME, from its massive rise to its slow downward trajectory. This xts object goes from January 1st 2020, to June 30th, 2023
 
 ```{r, echo = F, warning = F}
 ### Time series of the BBBYQ memestock
 
 getSymbols(
-    Symbols = "BBBYQ"
+    Symbols = "GME"
 )
 
-BBBYQ = BBBYQ["2020-01/2023-06"]
+GME = GME["2020-01/2023-06"]
 
 
 plot(
-  BBBYQ$BBBYQ.Close
+  GME$GME.Close
 )
 
 
@@ -37,13 +38,10 @@ plot(
 
 The xts object has is indexed by time, with each observation being one sequential day. Each observation has the stock ticker open, high, low, and close value.
 
-
 ```{r, warning= F}
-class(BBBYQ)
-summary(BBBYQ)
+class(GME)
+summary(GME)
 ```
-
-
 
 ### 3. Analysis
 
@@ -55,19 +53,18 @@ Value and smoothed
 
 ```{r, echo = F}
 
-BBBYQ = BBBYQ$BBBYQ.Close
+GME = GME$GME.Close
 
-plot(BBBYQ,
+plot(GME,
      lwd = 0.5,
      main = "Close value and month-smoothed value"
      )
-lines( rollmean(BBBYQ, 14, align = "center"),
+lines( rollmean(GME, 14, align = "center"),
        col = "red"
        )
 
 
 ```
-
 
 ```{r, echo = F, warning= F}
 
@@ -81,23 +78,19 @@ lines( rollmean(BBBYQ, 14, align = "center"),
 
 ```
 
-
-
-
 #### Stationarity analysis
 
 ```{r}
 
-plot(diff(BBBYQ),
+plot(diff(GME),
      lwd = 0.5,
      main = "First differences, i.e. daily gain, and month-smoothed value"
     )
-lines(diff(rollmean(BBBYQ, 14, align = "center") ),
+lines(diff(rollmean(GME, 14, align = "center") ),
         col = "red"
     )
 
 ```
-
 
 #### pdq & PDQ
 
@@ -107,23 +100,20 @@ There may also be some seasonality to the data
 
 
 
-acf(BBBYQ,
-    main = "BBBYQ acf")
-pacf(BBBYQ,
-     main = "BBBYQ pacf")
+acf(GME,
+    main = "GME acf")
+pacf(GME,
+     main = "GME pacf")
 
-BBBYQ2 = arima(BBBYQ, order = c(1,1,1) )
+GME2 = arima(GME, order = c(1,1,1) )
 
-acf(BBBYQ2$residuals,
-    main = "BBBYQ ARIMA(1,1,1)  residuals acf")
-pacf(BBBYQ2$residuals,
-     main = "BBBYQ ARIMA(1,1,1) residuals pacf")
+acf(GME2$residuals,
+    main = "GME ARIMA(1,1,1)  residuals acf")
+pacf(GME2$residuals,
+     main = "GME ARIMA(1,1,1) residuals pacf")
 
-plot(BBBYQ2$residuals,
-     main = "BBBYQ ARIMA(1,1,1) residuals")
+plot(GME2$residuals,
+     main = "GME ARIMA(1,1,1) residuals")
 
 
 ```
-
-
-
